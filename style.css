@@ -1,205 +1,68 @@
-
-.homepage{
+.container{
     display:grid;
-    grid-template-columns:repeat(15,1fr);
-    grid-template-rows:repeat(7,1fr);
-    grid-auto-rows:minmax(100px,auto);
-}
-.homepage > div{
-    background:#eee;
-    padding:1em;
-}
-
-.homepage > div:nth-child(odd){
-    background: #ddd;
-}
-.landing > div:nth-child(odd){
-    background: #ddd;
-}
-
-.features > div:nth-child(odd){
-    background: #eee;
+    height:100vh;
+    grid-template-columns:75px .6fr .3fr;
+    grid-template-rows: 1fr .5fr .4fr 1.2fr .7fr .3fr;
+    grid-template-areas:
+    "sidebar main realtors"
+    "sidebar features features"
+    "sidebar reviews reviews"
+    "sidebar listings listings"
+    "sidebar pictures pictures"
+    "sidebar footer footer";
+    grid-gap:.25rem;
 }
 
 .sidebar{
-    grid-row:1/span 7;
-    grid-column:1/ span 1;
+    background-color:rgb(157,255,233);
+    grid-area:sidebar;
+    
 }
 
-.landing{
-    grid-column:2/span 14;
-    grid-row:1/ span 2;
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    grid-template-rows:repeat(10,1fr);
-    grid-auto-rows:minmax(100px,auto);
+main{
+    background-color:rgb(110,255,233);
+    grid-area:main;
+    
 }
 
-.centerLanding{
-    grid-column:1/span 3;
-    grid-row:1/ span 9;
-}
-
-.seenOn{
-    grid-column: 1 / span 3;
-    grid-row: 10/ span 1;
-}
 .realtors{
-    grid-column: 4/ span 1;
-    grid-row: 1 / span 10;
+    background-color:rgb(157,10,233);
+    grid-area:realtors;
 }
 
 .features{
-    grid-column:2/ span 14;
-    grid-row: 3/ span 1;
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    grid-template-rows:repeat(2,1fr);
-    grid-auto-rows:minmax(100px,auto);
-    grid-gap:1em;
-    
+    background-color:rgb(157,255,213);
+    grid-area:features;
 }
-
-
-.card1{
-    grid-column:1/span 1;
-    grid-row:1/ span 1;
-}
-
-.card2{
-    grid-column:2/span 1;
-    grid-row:1/ span 1;
-}
-.card3{
-    grid-column:3/span 1;
-    grid-row:1/ span 1;
-}
-.card4{
-    grid-column:1/span 1;
-    grid-row:2/ span 1;
-}
-.card5{
-    grid-column:2/span 1;
-    grid-row:2/ span 1;
-}
-.card6{
-    grid-column:3/span 1;
-    grid-row:2/ span 1;
-}
-
 .reviews{
-    grid-column:2/ span 14;
-    grid-row: 4/ span 1;
-    display:grid;
-    grid-template-columns:repeat(16,1fr);
-    grid-template-rows:repeat(8,1fr);
-    grid-auto-rows:minmax(100px,auto);
+    background-color:rgb(157,212,213);
+    grid-area:reviews;
 }
-
-.image1{
-    grid-column:2/span 5;
-    grid-row:3/ span 4;
-    outline: solid;
-}
-
-.image2{
-    grid-column:5/ span 5;
-    grid-row:5/ span 4;
-    outline: solid;
-}
-
-.review{
-    grid-column: 9/ span 8;
-    grid-row: 3/ span 4;
-    outline: solid;
-}
-
 .listings{
-    grid-column:2/ span 14;
-    grid-row: 5/ span 1;
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    grid-template-rows:repeat(2,1fr);
-    grid-auto-rows:minmax(100px,auto);
-    grid-gap:3em;
-    
+    background-color:rgb(157,125,213);
+    grid-area:listings;
 }
-.house{
-    border: solid;
+.pictures{
+    background-color:rgb(157,230,213);
+    grid-area:pictures;
 }
-
-.wrapper{
-    grid-column:2/ span 14;
-    grid-row: 6/ span 1;
-    display: grid;
-    grid-template-columns:repeat(8,1fr);
-    grid-template-rows:repeat(7,1fr);
-    grid-auto-rows:minmax(100px,auto);
-    grid-gap:1em;
-    justify-items:stretch;
-    align-items: stretch;
+footer{
+    background-color:rgb(54,230,213);
+    grid-area:footer;
 }
 
-.wrapper > div{
-    background:#ddd;
-    padding:1em;
+@media only screen and (max-width:1000px){
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows:.2fr 1fr .6fr .5fr .4fr 1.2fr .7fr .3fr;
+        grid-template-areas:
+        "sidebar"
+        "main"
+        "realtors"
+        "features"
+        "reviews"
+        "listings"
+        "pictures"
+        "footer";
+    }
 }
-
-
-.box1{
-    grid-column:1 / span 2;
-    grid-row:1/ span 2;
-}
-.box2{
-    grid-column:3/ span 3;
-    grid-row: 1/ span 3 ;
-}
-.box3{
-    grid-column: 6/span 1;
-    grid-row:1/span 2;
-}
-.box4{
-    grid-column:7/span 2;
-    grid-row: 1/ span 2;
-}
-.box5{
-    grid-column:1 / span 2;
-    grid-row:3/ span 3;
-}
-.box6{
-    grid-column:3/ span 2;
-    grid-row: 4/ span 2 ;
-}
-.box7{
-    grid-column: 5/span 1;
-    grid-row:4/span 1;
-}
-.box8{
-    grid-column:6/span 2;
-    grid-row: 3/ span 2;
-}
-.box9{
-    grid-column:8 / span 1;
-    grid-row:3/ span 3;
-}
-.box10{
-    grid-column:1/ span 1;
-    grid-row: 6/ span 2 ;
-}
-.box11{
-    grid-column: 2/span 2;
-    grid-row:6/span 2;
-}
-.box12{
-    grid-column:4/span 1;
-    grid-row: 6/ span 2;
-}
-.box13{
-    grid-column:5/span 3;
-    grid-row: 5/ span 3;
-}
-.box14{
-    grid-column:8/span 1;
-    grid-row: 6/ span 2;
-}
-
