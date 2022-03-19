@@ -1,0 +1,322 @@
+body{
+    margin: 0;
+}
+.container{
+    display:grid;
+    height:100vh;
+    grid-template-columns:.05fr .7fr .3fr;
+    grid-template-rows: 1fr .5fr .4fr 1.2fr .7fr .3fr;
+    grid-template-areas:
+    "sidebar main realtors"
+    "sidebar features features"
+    "sidebar reviews reviews"
+    "sidebar listings listings"
+    "sidebar pictures pictures"
+    "sidebar footer footer";
+    grid-gap:.25rem;
+}
+
+.sidebar{
+    background-color:rgb(157,255,233);
+    grid-area:sidebar;
+    
+}
+
+main{
+    
+    grid-area:main;
+    display:grid;
+    grid-template-rows:.1fr .8fr .1fr;
+    grid-template-areas:
+    "companyName"
+    "landingCenter"
+    "seenOn";
+    background-image:url('https://wallpapercave.com/wp/wp3604632.jpg');
+    background-position: center center ;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    box-shadow: inset 0 0 0 1000px rgba(183,138,56,.85);
+
+    padding-left:5%;
+    padding-right:5%;
+    
+}
+
+.companyName{
+    grid-area:companyName;
+    /*background:#CED9D9;*/
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto Mono', monospace;
+    color:rgb(49,59,78);
+}
+
+.landingCenter{
+    grid-area:landingCenter;
+    /*background:#AFAFAF;*/
+    
+    padding-top:200px;
+    padding-bottom: 200px;
+    font-family: 'Roboto Mono', monospace;
+    color:rgb(49,59,78);
+} 
+
+.landingCenter > h1{
+    color:white;
+}
+
+.landingCenter > button{
+    background-color: rgb(49,59,78);
+    color: white;
+    border:none;
+    width:200px;
+    line-height:3;
+    font-family: 'Roboto Mono', monospace;
+}
+.seenOn{
+    grid-area: seenOn;
+    /*background:#9BA4A4;*/
+    border:none;
+    border-top: 1px solid #000;
+    font-family: 'Roboto Mono', monospace;
+    
+}
+
+legend{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left:10px;
+    padding-right: 10px;
+}
+
+
+
+.realtors{
+    background-color:rgb(49,59,78);
+    grid-area:realtors;
+    padding:250px 10px 250px 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display:grid;
+    grid-template-rows:.1fr .3fr .3fr .3fr;
+    grid-gap:2em;
+    grid-template-areas: 
+    "realtorTitle"
+    "realtorBox1"
+    "realtorBox2"
+    "realtorBox3"; 
+}
+
+
+
+.realtorTitle{
+    grid-area:realtorTitle;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto Mono', monospace;
+    color:rgb(183,138,56);
+}
+
+.realtorBox{
+    display:grid;
+    grid-template-columns:auto 2fr;
+    grid-template-rows:1fr 1fr;
+    
+    grid-template-areas:
+    "realtor-Img realtorName realtorName"
+    "realtor-Img houseSold houseSold";
+    
+}
+
+.realtor-Img{
+    grid-area:realtor-Img;
+    overflow: hidden;
+    height:80px;
+    width:80px;
+    border-radius: 60%;
+}
+
+.realtorName{
+    grid-area:realtorName;
+    text-align:left;
+    padding-left: 10px;
+    font-size: 25px;
+    font-family: 'Roboto Mono', monospace;
+    color:white;
+}
+
+.houseSold{
+    grid-area:houseSold;
+    text-align: left;
+    padding-left: 10px;
+    font-family: 'Roboto Mono', monospace;
+    color:rgb(183,138,56);
+    
+}
+.realtorBox1{
+    grid-area:realtorBox1;
+}
+.realtorBox2{
+    grid-area:realtorBox2;
+    
+}
+.realtorBox3{
+    grid-area:realtorBox3;
+}
+
+
+.features{
+    background-color:white;
+    grid-area:features;
+    padding-top: 150px;
+    padding-bottom:150px;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3,400px);
+    grid-template-rows:repeat(2,1fr);
+    grid-gap:3em;
+    grid-template-areas:
+    "card1 card2 card3"
+    "card4 card5 card6";
+}
+
+.card{
+        min-height:200px;
+        display: grid;
+        grid-template-columns: auto 1fr 1fr;
+        grid-template-rows:50px 150px;
+        
+        grid-template-areas:
+        "icon featuresTitle featuresTitle"
+        "icon featuresContent featuresContent";
+}
+
+.icon{
+    grid-area:icon;
+    color:rgb(183,138,56);
+}
+
+.featuresTitle{
+    grid-area:featuresTitle;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 20px;
+    line-height: 2.5;
+    
+    padding-left: 10px;
+}
+
+.featuresContent{
+    grid-area:featuresContent;
+    padding-left: 10px;
+    font-family: 'Roboto Mono', monospace;
+    
+}
+
+
+.card1{
+    grid-area:card1;
+    
+}
+.card2{
+    grid-area:card2;
+    
+}
+.card3{
+    grid-area:card3;
+    
+}
+.card4{
+    grid-area:card4;
+    
+}
+.card5{
+    grid-area:card5;
+    
+}
+.card6{
+    grid-area:card6;
+    
+}
+
+
+.reviews{
+    background-color:rgb(157,212,213);
+    grid-area:reviews;
+}
+.listings{
+    background-color:rgb(157,125,213);
+    grid-area:listings;
+}
+.pictures{
+    background-color:rgb(157,230,213);
+    grid-area:pictures;
+}
+footer{
+    background-color:rgb(54,230,213);
+    grid-area:footer;
+}
+
+@media only screen and (max-width:1450px){
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows:.2fr 1fr .6fr .5fr .4fr 1.2fr .7fr .3fr;
+        grid-template-areas:
+        "sidebar"
+        "main"
+        "realtors"
+        "features"
+        "reviews"
+        "listings"
+        "pictures"
+        "footer";
+    }
+    main{
+        height:95vh;
+        
+    }
+    .sidebar{
+        height:5vh;
+    }
+    .realtors{
+        padding:40px 0px 40px 0px;
+        
+    }
+    .features{
+    display: grid;
+    grid-template-columns: repeat(2,400px);
+    grid-template-rows:repeat(3,1fr);
+    grid-gap:3em;
+    grid-template-areas:
+    "card1 card2"
+    "card3 card4"
+    "card5 card6";
+    }
+    
+}
+
+@media only screen and (max-width:900px){
+    .features{
+        padding-top: 50px;
+        padding-bottom:50px;
+        display: grid;
+        grid-template-columns: 400px;
+        grid-template-rows:repeat(6,1fr);
+        grid-gap:3em;
+        grid-template-areas:
+        "card1"
+        "card2"
+        "card3"
+        "card4"
+        "card5"
+        "card6";
+        }
+}
