@@ -310,9 +310,118 @@ legend{
 }
 
 .listings{
-    background-color:rgb(157,125,213);
+    background-color:white;
     grid-area:listings;
+    padding-top: 150px;
+    padding-bottom:150px;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3,300px);
+    grid-template-rows:repeat(2,1fr);
+    grid-gap:3em;
+    grid-template-areas:
+    "listing1 listing2 listing3"
+    "listing4 listing5 listing6";
 }
+
+.listingCards{
+    position:relative;
+    min-height:350px;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    grid-template-rows:repeat(8,1fr);
+    grid-template-areas:
+    "listingsImg listingsImg"
+    "listingsImg listingsImg"
+    "listingsImg listingsImg"
+    "listingsImg listingsImg"
+    "listingName listingName"
+    "listingCountry listingRooms"
+    "houseSqft listingPrice"
+    "listingButton listingButton";
+}
+
+.listingCards > button{
+    border:none;
+    background-color:rgb(183,138,56);
+    font-family: 'Roboto Mono', monospace;
+    font-size: 20px;
+    color:white;
+}
+
+.listingsImg{
+    grid-area:listingsImg;
+    width:100%;
+    height: 100%;
+}
+
+.listingName{
+    position:absolute;
+    top:-20px;
+    grid-area:listingName;
+    text-align:center;
+    width:250px;
+    margin-left:25px;
+    margin-right:25px;
+    line-height: 3;
+    background-color:rgb(49,59,78);
+    border:none;
+    font-size: 15px;
+    color:white;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.listingCountry, .houseSqft, .listingRooms, .listingPrice {
+    grid-area:listingCountry;
+    display:flex;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 15px;
+    color:rgb(183,138,56);
+    margin-left:10px;
+}
+
+.listingCountry > p, .houseSqft > p, .listingRooms > p, .listingprice > p{
+    margin-top:0px;
+    padding-left:10px;
+    color:black;
+}
+.houseSqft{
+    grid-area:houseSqft;
+}
+.listingRooms{
+    grid-area:listingRooms;
+}
+.listingPrice{
+    grid-area:listingPrice;
+}
+.listingButton{
+    grid-area:listingButton;
+}
+
+
+.listing1{
+    grid-area:listing1;
+}
+
+.listing2{
+    grid-area:listing2;
+}
+
+.listing3{
+    grid-area:listing3;
+}
+.listing4{
+    grid-area:listing4;
+}
+.listing5{
+    grid-area:listing5;
+}
+.listing6{
+    grid-area:listing6;
+}
+
+
+
 .pictures{
     background-color:rgb(157,230,213);
     grid-area:pictures;
@@ -367,6 +476,18 @@ footer{
         grid-column:4/span 4;
         grid-row: 10/span 10;
     }
+
+    .listings{
+        padding-top: 100px;
+        padding-bottom:100px;
+        grid-template-columns: repeat(2,300px);
+        grid-template-rows:repeat(3,1fr);
+        grid-gap:3em;
+        grid-template-areas:
+        "listing1 listing2"
+        "listing3 listing4"
+        "listing5 listing6";
+    }
     
 }
 
@@ -402,5 +523,20 @@ footer{
     .reviews-Img2{
         grid-column:3/span 3;
         grid-row: 10/span 10;
+    }
+
+    .listings{
+        padding-top: 100px;
+        padding-bottom:100px;
+        grid-template-columns: repeat(1,300px);
+        grid-template-rows:repeat(6,1fr);
+        grid-gap:3em;
+        grid-template-areas:
+        "listing1"
+        "listing2"
+        "listing3"
+        "listing4"
+        "listing5"
+        "listing6";
     }
 }
