@@ -423,7 +423,7 @@ legend{
 
 
 .pictures{
-    background-color:rgb(157,230,213);
+    background-color:rgb(249,247,246);
     grid-area:pictures;
     display: grid;
     grid-template-columns:repeat(8,1fr);
