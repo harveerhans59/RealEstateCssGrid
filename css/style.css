@@ -18,24 +18,25 @@ body{
 .sidebar{
     background-color:rgb(198,152,98);
     grid-area:sidebar;
-    
+    color: rgb(49,59,78);
+    display:grid;
+    justify-content:center;
 }
 
 main{
     
     grid-area:main;
     display:grid;
-    grid-template-rows:.1fr .8fr .1fr;
+    grid-template-rows:.1fr .9fr ;
     grid-template-areas:
     "companyName"
-    "landingCenter"
-    "seenOn";
+    "landingCenter";
     background-image:url('https://wallpapercave.com/wp/wp3604632.jpg');
     background-position: center center ;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    box-shadow: inset 0 0 0 1000px rgba(198,152,98,.85);
+    box-shadow: inset 0 0 0 1000px rgba(49,59,78,.85);
 
     padding-left:5%;
     padding-right:5%;
@@ -50,15 +51,15 @@ main{
     justify-content: center;
     align-items: center;
     font-family: 'Roboto Mono', monospace;
-    color:rgb(49,59,78);
+    color:rgb(198,152,98);;
 }
 
 .landingCenter{
     grid-area:landingCenter;
-    padding-top:200px;
-    padding-bottom: 200px;
+    padding-top:250px;
+    padding-bottom: 250px;
     font-family: 'Roboto Mono', monospace;
-    color:rgb(49,59,78);
+    color:rgb(198,152,98);;
 } 
 
 .landingCenter > h1{
@@ -66,21 +67,14 @@ main{
 }
 
 .landingCenter > button{
-    background-color: rgb(49,59,78);
+    background-color: rgb(198,152,98);;
     color: white;
     border:none;
     width:200px;
     line-height:3;
     font-family: 'Roboto Mono', monospace;
 }
-.seenOn{
-    grid-area: seenOn;
-    /*background:#9BA4A4;*/
-    border:none;
-    border-top: 1px solid #000;
-    font-family: 'Roboto Mono', monospace;
-    
-}
+
 
 legend{
     text-align: center;
@@ -237,7 +231,7 @@ legend{
 
 
 .reviews{
-    background-color:rgb(157,212,213);
+   
     grid-area:reviews;
     justify-content: center;
     display:grid;
@@ -328,6 +322,7 @@ legend{
     position:relative;
     min-height:350px;
     display:grid;
+    background-color:rgb(249,247,246);
     grid-template-columns:repeat(2,1fr);
     grid-template-rows:repeat(8,1fr);
     grid-template-areas:
@@ -511,9 +506,59 @@ legend{
 
 
 footer{
-    background-color:rgb(54,230,213);
+    background-color:rgb(49,59,78);
     grid-area:footer;
+    padding: 100px 0 100px 0;
+    justify-content: center;
+    
 }
+
+.footer{
+    display:grid;
+    justify-content: center;
+    grid-template-columns:repeat(6,1fr);
+    grid-template-rows:1fr;
+    grid-template-areas:
+    "footer-item1 footer-item2 footer-item3 footer-item4 footer-item5 footer-item6";
+}
+.footer-item{
+    font-size: 12px;
+    margin:0 20px 0 20px;
+    padding:0 20px 0 20px;    
+    line-height:4;
+    color:white;
+    font-family: 'Roboto Mono', monospace;
+    background-color:rgb(49,59,78);
+    border:none;
+}
+.footer-item:hover{
+    background-color:rgb(198,152,98);
+}
+
+.footer-item1{
+    grid-area:footer-item1;
+}
+
+.footer-item2{
+    grid-area:footer-item2;
+}
+
+.footer-item3{
+    grid-area:footer-item3;
+}
+
+.footer-item4{
+    grid-area:footer-item4;
+}
+
+.footer-item5{
+    grid-area:footer-item5;
+}
+
+.footer-item6{
+    grid-area:footer-item6;
+}
+
 
 @media only screen and (max-width:1450px){
     .container{
@@ -529,10 +574,19 @@ footer{
         "pictures"
         "footer";
     }
-    main{
-        height:95vh;
-        
+    .sidebar{
+        justify-content:right;
+        padding-right:10px;
     }
+    main{
+        height:95vh; 
+    }
+    .landingCenter{
+        padding-top:400px;
+        padding-bottom: 400px;
+        
+        color:rgb(198,152,98);;
+    } 
     .sidebar{
         height:5vh;
     }
@@ -570,6 +624,16 @@ footer{
         "listing1 listing2"
         "listing3 listing4"
         "listing5 listing6";
+    }
+    .footer{
+        display:grid;
+        justify-content: center;
+        grid-template-columns:repeat(2,1fr);
+        grid-template-rows:1fr 1fr;
+        grid-template-areas:
+        "footer-item1 footer-item2"
+        "footer-item3 footer-item4" 
+        "footer-item5 footer-item6";
     }
     
 }
@@ -619,4 +683,17 @@ footer{
         "listing5"
         "listing6";
     }
+    .footer{
+        
+        grid-template-columns:repeat(1,1fr);
+        grid-template-rows:repeat(6,1fr);
+        grid-template-areas:
+        "footer-item1" 
+        "footer-item2"
+        "footer-item3"
+        "footer-item4" 
+        "footer-item5" 
+        "footer-item6";
+    }
+    
 }
